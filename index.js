@@ -6,32 +6,21 @@ var subl = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl';
 
 var argv = process.argv;
 argv.shift();
+argv.shift();
 
 var file_path = __dirname;
 var current_path = process.cwd();
 
-var cp_files = ['index.js', 'package.json', 'LICENSE', 'README.md'];
+var cp_files = ['.gitignore', 'tmpl.js', 'package.json', 'LICENSE', 'README.md'];
 
-if ( argv.length >= 1 ) {
-  var first_arg = argv[0];
-  if ( first_arg == '-h' || first_arg == '--help' ) {
-    echo("icli usage : icli init")
-  }
-  
-  if ( first_arg == 'init' ) {
-    file_path.forEach(function(path){
-      cp('-f', file_path + '/' + path, current_path);  
-    });
-    
-  }
-}
+echo("start init cli-tmpl...");
 
-// execFile: executes a file with the specified arguments
-child_process.exec('cat *.js bad_file | wc -l',
-  function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout);
-    console.log('stderr: ' + stderr);
-    if (error !== null) {
-      console.log('exec error: ' + error);
-    }
+cp_files.forEach(function(path){
+  var p = path;
+  if(path == 'tmpl.js'){
+    p = "index.js";
+  }
+  cp('-f', file_path + '/' + path, current_path +'/' + p);  
 });
+
+echo("init finished");
