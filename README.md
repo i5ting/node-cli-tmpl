@@ -1,4 +1,6 @@
 # node-cli-tmpl
 
 
-cli init
+```
+icli
+```
