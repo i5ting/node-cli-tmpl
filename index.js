@@ -12,10 +12,10 @@ var current_path = process.cwd();
 
 var cp_files = ['index.js', 'package.json', 'LICENSE', 'README.md'];
 
-if ( argv.length > 1 ) {
+if ( argv.length >= 1 ) {
   var first_arg = argv[0];
   if ( first_arg == '-h' || first_arg == '--help' ) {
- 
+    echo("icli usage : icli init")
   }
   
   if ( first_arg == 'init' ) {
