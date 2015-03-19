@@ -20,6 +20,11 @@ cp_files.forEach(function(path){
   if(path == 'tmpl.js'){
     p = "index.js";
   }
+  
+  if(path == 'gitignore'){
+    p = ".gitignore";
+  }
+  
   cp('-f', file_path + '/' + path, current_path +'/' + p);  
 });
 
