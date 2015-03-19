@@ -11,7 +11,7 @@ argv.shift();
 var file_path = __dirname;
 var current_path = process.cwd();
 
-var cp_files = ['.gitignore', 'tmpl.js', 'package.json', 'LICENSE', 'README.md'];
+var cp_files = ['gitignore', 'tmpl.js', 'package.json', 'LICENSE', 'README.md'];
 
 echo("start init cli-tmpl...");
 
