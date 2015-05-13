@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var child_process = require('child_process');
-var subl = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl';
 
 var argv = process.argv;
 argv.shift();
@@ -25,3 +24,10 @@ child_process.exec('cat *.js bad_file | wc -l',
       console.log('exec error: ' + error);
     }
 });
+
+// execFile: executes a file with the specified arguments
+// child_process.execFile(file_path + '/bson.sh',null,{cwd:current_path},function (error,stdout,stderr) {
+//     if (error !== null) {
+//       console.log('exec error: ' + error);
+//     }
+// });

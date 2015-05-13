@@ -2,7 +2,6 @@
 
 require('shelljs/global');
 var child_process = require('child_process');
-var subl = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl';
 
 var argv = process.argv;
 argv.shift();
