@@ -15,16 +15,22 @@ icli = node-cli-template
 
 ## Usage 
 
+### 新建
+在新建目录执行
+
 ```
 icli
 ```
+这样就可以创建一个node cli项目了
 
+### 测试
 执行测试代码，自动检测文件变动
 
 ```
 gulp = npm test
 ```
 
+### 测试覆盖率
 coverall.io代码测试覆盖率
 
 ```
@@ -33,7 +39,7 @@ npm run cov
 
 注意此时需要替换repo_token 在`.coveralls.yml`和`.travis.yml`文件里。
 
- 
+
 [npm-image]: https://img.shields.io/npm/v/mongoosedao.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/mongoosedao
 
